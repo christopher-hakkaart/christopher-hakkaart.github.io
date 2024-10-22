@@ -23,6 +23,10 @@ export default defineConfig({
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
+				{
+					label: 'nf-core',
+					autogenerate: { directory: 'nf-core' },
+				},
 			],
 		}),
 	],

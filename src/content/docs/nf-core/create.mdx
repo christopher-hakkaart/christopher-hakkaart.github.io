@@ -1,0 +1,131 @@
+---
+title: Create
+description: Create
+---
+
+import { Steps    } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
+
+### Create a pipeline
+
+<Steps>
+
+1. Run the `nf-core pipelines create`.
+2. Select **Let's go!** on the welcome screen.
+3. Select **Custom** on the Choose pipeline type screen.
+4. Enter your pipeline details, replacing < YOUR NAME > with your own name, then select **Next**
+    - **GitHub organisation:** myorg.
+    - **Workflow name:** myfirstpipeline.
+    - **A short description of your pipeline:** My first pipeline.
+    - **Name of the main author / authors:** < YOUR NAME >.
+5. Select **Continue** on the Template features screen.
+6. Select **Finish** on the Final details screen.
+7. Wait for the pipeline to be created, then select **Continue**.
+8. Select **Finish without creating a repo** on the Create GitHub repository screen.
+9. Select **Close** on the HowTo create a GitHub repository page.
+
+</Steps>
+
+### Template tour
+
+<FileTree>
+
+- CHANGELOG.md
+- CITATIONS.md
+- CODE_OF_CONDUCT.md
+- LICENSE
+- README.md
+- assets
+  - adaptivecard.json
+  - email_template.html
+  - email_template.txt
+  - methods_description_template.yml
+  - multiqc_config.yml
+  - nf-core-demo_logo_light.png
+  - samplesheet.csv
+  - schema_input.json
+  - sendmail_template.txt
+  - slackreport.json
+- conf
+  - base.config
+  - igenomes.config
+  - igenomes_ignored.config
+  - modules.config
+  - test.config
+  - test_full.config
+- docs
+  - README.md
+  - images
+    - mqc_fastqc_adapter.png
+    - mqc_fastqc_counts.png
+    - mqc_fastqc_quality.png
+    - nf-core-demo_logo_dark.png
+    - nf-core-demo_logo_light.png
+  - output.md
+  - usage.md
+- main.nf
+- modules
+  - nf-core
+    - fastqc
+      - environment.yml
+      - main.nf
+      - meta.yml
+      - tests
+        - main.nf.test
+        - main.nf.test.snap
+        - tags.yml
+    - multiqc
+      - environment.yml
+      - main.nf
+      - meta.yml
+      - tests
+        - main.nf.test
+        - main.nf.test.snap
+        - nextflow.config
+        - tags.yml
+- modules.json
+- nextflow.config
+- nextflow_schema.json
+- subworkflows
+  - local
+    - utils_nfcore_demo_pipeline
+    - main.nf
+  - nf-core
+    - utils_nextflow_pipeline
+      - main.nf
+      - meta.yml
+      - tests
+        - main.function.nf.test
+        - main.function.nf.test.snap
+        - main.workflow.nf.test
+        - nextflow.config
+        - tags.yml
+  - utils_nfcore_pipeline
+      - main.nf
+      - meta.yml
+      - tests
+        - main.function.nf.test
+        - main.function.nf.test.snap
+        - main.workflow.nf.test
+        - main.workflow.nf.test.snap
+        - nextflow.config
+        - tags.yml
+  - utils_nfschema_plugin
+    - main.nf
+    - meta.yml
+    - tests
+      - main.nf.test
+      - nextflow.config
+      - nextflow_schema.json
+  - utils_nfvalidation_plugin
+    - main.nf
+    - meta.yml
+    - tests
+      - main.nf.test
+      - nextflow_schema.json
+      - tags.yml
+- tower.yml
+- workflows
+    - demo.nf
+
+</FileTree>
