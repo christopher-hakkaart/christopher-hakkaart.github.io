@@ -1,5 +1,5 @@
 ---
-title: Create a pipeline
+title: Create a custom pipeline
 description: Create a custom pipeline
 ---
 
@@ -8,7 +8,7 @@ import { FileTree } from '@astrojs/starlight/components';
 
 ### Create a custom pipeline
 
-Create a pipeline:
+To create a custom pipeline:
 
 <Steps>
 
@@ -28,107 +28,3 @@ Create a pipeline:
 10. Select **Close**.
 
 </Steps>
-
-### Template tour
-
-<FileTree>
-
-- CHANGELOG.md
-- CITATIONS.md
-- CODE_OF_CONDUCT.md
-- LICENSE
-- README.md
-- assets
-  - adaptivecard.json
-  - email_template.html
-  - email_template.txt
-  - methods_description_template.yml
-  - multiqc_config.yml
-  - nf-core-demo_logo_light.png
-  - samplesheet.csv
-  - schema_input.json
-  - sendmail_template.txt
-  - slackreport.json
-- conf
-  - base.config
-  - igenomes.config
-  - igenomes_ignored.config
-  - modules.config
-  - test.config
-  - test_full.config
-- docs
-  - README.md
-  - images
-    - mqc_fastqc_adapter.png
-    - mqc_fastqc_counts.png
-    - mqc_fastqc_quality.png
-    - nf-core-demo_logo_dark.png
-    - nf-core-demo_logo_light.png
-  - output.md
-  - usage.md
-- main.nf
-- modules
-  - nf-core
-    - fastqc
-      - environment.yml
-      - main.nf
-      - meta.yml
-      - tests
-        - main.nf.test
-        - main.nf.test.snap
-        - tags.yml
-    - multiqc
-      - environment.yml
-      - main.nf
-      - meta.yml
-      - tests
-        - main.nf.test
-        - main.nf.test.snap
-        - nextflow.config
-        - tags.yml
-- modules.json
-- nextflow.config
-- nextflow_schema.json
-- subworkflows
-  - local
-    - utils_nfcore_demo_pipeline
-    - main.nf
-  - nf-core
-    - utils_nextflow_pipeline
-      - main.nf
-      - meta.yml
-      - tests
-        - main.function.nf.test
-        - main.function.nf.test.snap
-        - main.workflow.nf.test
-        - nextflow.config
-        - tags.yml
-  - utils_nfcore_pipeline
-      - main.nf
-      - meta.yml
-      - tests
-        - main.function.nf.test
-        - main.function.nf.test.snap
-        - main.workflow.nf.test
-        - main.workflow.nf.test.snap
-        - nextflow.config
-        - tags.yml
-  - utils_nfschema_plugin
-    - main.nf
-    - meta.yml
-    - tests
-      - main.nf.test
-      - nextflow.config
-      - nextflow_schema.json
-  - utils_nfvalidation_plugin
-    - main.nf
-    - meta.yml
-    - tests
-      - main.nf.test
-      - nextflow_schema.json
-      - tags.yml
-- tower.yml
-- workflows
-    - demo.nf
-
-</FileTree>
