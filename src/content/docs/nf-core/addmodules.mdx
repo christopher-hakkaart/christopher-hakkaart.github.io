@@ -1,13 +1,33 @@
 ---
-title: Add nf-core modules
-description: Add nf-core modules to the nf-core template
+title: nf-core modules
+description:  Commands to manage Nextflow DSL2 modules.
 ---
 
 import { Steps    } from '@astrojs/starlight/components';
 
-### Add nf-core modules
+### List modules
 
-To add an nf-core module to your pipeline:
+To list modules in a local pipeline or remote repository:
+
+<Steps>
+
+1. 
+
+</Steps>
+
+### Show information
+
+To show usage information about a given module:
+
+<Steps>
+
+1. 
+
+</Steps> 
+
+### Install modules
+
+To install DSL2 modules in your pipeline:
 
 <Steps>
 
@@ -18,5 +38,43 @@ To add an nf-core module to your pipeline:
 5. Open `workflows/<pipelinename>.nf`
 6. Paste the include command with the other imported modules.
 7. Add the process to your workflow definition.
+
+</Steps>
+
+### Update modules
+
+To update DSL2 modules within your pipeline:
+
+<Steps>
+
+1. Navigate to your pipeline folder.
+2. Run `nf-core modules update`.
+3. Select **All modules**.
+4. Select **No previews, just update everything**.
+
+</Steps>
+
+### Remove modules
+
+To remove a module from a pipeline:
+
+<Steps>
+
+1. Navigate to your pipeline folder.
+2. Run `nf-core modules remove`.
+3. Enter the module name. For example, `seqtk/trim`.
+4. Open `workflows/<pipelinename>.nf`
+6. Remove the include command.
+7. Remove the process from your workflow definition.
+
+</Steps>
+
+### Patch modules
+
+To create a patch file for minor changes in a module:
+
+<Steps>
+
+1. 
 
 </Steps>
