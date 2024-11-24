@@ -1,0 +1,37 @@
+---
+title: Add nf-core modules
+description: Add nf-core modules to the nf-core template
+---
+
+import { Steps    } from '@astrojs/starlight/components';
+
+### Add nf-core modules
+
+Add an nf-core module to your pipeline:
+
+<Steps>
+
+1. Navigate to your pipeline folder.
+2. Run `nf-core modules install`.
+3. Enter the tool name. For example, `seqtk/trim`.
+4. Copy the include command.
+5. Open `workflows/<pipelinename>.nf`
+6. Paste the include command with the other imported modules.
+
+</Steps>
+
+
+
+
+
+```console
+INFO     Installing 'seqtk/trim'
+INFO     Use the following statement to include this module:
+
+include { SEQTK_TRIM } from '../modules/nf-core/seqtk/trim/main'
+```
+
+```bash
+cd my-myfirstpipeline
+nf-core modules install
+```
