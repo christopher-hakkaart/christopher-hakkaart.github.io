@@ -35,7 +35,11 @@ To show usage information about a given module:
 
 ### Install modules
 
-To install DSL2 modules in your pipeline:
+The `nf-core modules install` command is used to add specific software modules to an nf-core pipeline from the central `nf-core/modules` repository.
+It allows users to browse and select predefined modules.
+This command fetches the module files (e.g., Nextflow scripts and associated configuration files) and installs them into the pipeline's local directory, ensuring compatibility with nf-core standards.
+
+To install modules in your pipeline:
 
 <Steps>
 
@@ -51,7 +55,11 @@ To install DSL2 modules in your pipeline:
 
 ### Update modules
 
-To update DSL2 modules within your pipeline:
+The `nf-core modules update` command updates pipeline modules to the latest versions from the central `nf-core/modules` repository.
+It compares the current versions in your pipeline with the latest available and can update outdated modules.
+This keeps pipelines aligned with nf-core standards, fixes bugs, integrates new features, and updates tools.
+
+To update all modules within your pipeline:
 
 <Steps>
 
