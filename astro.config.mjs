@@ -14,10 +14,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Getting started',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Getting started', slug: 'gettingstarted/index' },
-					],
+					autogenerate: { directory: 'gettingstarted' },
 				},
 				{
 					label: 'Reference',
