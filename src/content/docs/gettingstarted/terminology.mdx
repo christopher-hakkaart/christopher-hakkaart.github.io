@@ -1,0 +1,38 @@
+---
+title: Terminology
+description: Learn how to troubleshoot errors
+---
+
+The features offered by Nextflow DSL2 can be used in various ways depending on pipeline granularity.
+See the listing below for the hierarchy and associated terminology we have decided to use when referring to DSL2 components.
+
+## Domain-Specific Language (DSL)
+
+A domain-specific language (DSL) is a programming language that is developed for a specific application.
+The current version of is known as DSL2, the second iteration of the Nextflow language.
+Nextflow DSL2 allows pipelines to be scaled and modularized.
+The features offered by Nextflow DSL2 can adapted depending on the granularity with which you would like to write pipelines.
+
+## Module
+
+A module is an atomic process that can be used within different pipelines.
+That is, it cannot be split into another module.
+For example, a module file containing the process definition for a single tool, such as `FastQC`.
+Atomic nf-core modules are available in [nf-core/modules](https://github.com/nf-core/modules/tree/master/modules) directory, along with their documentation and tests.
+
+## Subworkflow
+
+A chain of multiple modules that offer a higher-level of functionality within the context of a pipeline.
+For example, a subworkflow to run multiple QC tools with FastQ files as input.
+Subworkflows should be shipped with the pipeline implementation and if required they should be shared amongst different pipelines directly from there.
+Shareable nf-core subworkflow files are available in the [subworkflow](https://github.com/nf-core/modules/tree/master/subworkflows) directory of of the [nf-core/modules](https://github.com/nf-core/modules/tree/master) repository.
+
+## Component
+
+Component is our umbrella term for both modules and subworkflows.
+
+## Workflow
+
+An end-to-end pipeline where one or more inputs produce a series of outputs.
+This can either be implemented using a large monolithic script or by using a combination of DSL2 modules and subworkflows.
+nf-core pipelines can have multiple workflows, such as processing different data types for the same ultimate purpose.

@@ -1,0 +1,35 @@
+---
+title: Modules
+description: How to review M
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Code } from '@astrojs/starlight/components';
+
+# General
+
+## Required and optional input files
+
+All mandatory and optional input files MUST be included in input channel definitions.
+
+## Non-file mandatory command arguments
+
+Non-file mandatory arguments or arguments needed to modify the command to make the module run with no errors SHOULD be provided as value channels. See **Input and output options** for more information.
+
+## Optional command arguments
+
+All non-mandatory command-line tool non-file arguments MUST be provided as a string via the `$task.ext.args` variable.
+
+<Aside>
+The value of `task.ext.args` is supplied from the `modules.config` file by assigning a closure that returns a string value to `ext.args`.
+</Aside>
+
+## Use of multi-command piping
+
+Software that can be piped together SHOULD be added to separate module files unless there is a run-time, storage advantage in implementing in this way.
+
+For example, using a combination of bwa and samtools to output a BAM file instead of a SAM file:
+
+```
+bwa mem $args | samtools view $args2 -B -T ref.fasta
+```

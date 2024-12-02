@@ -1,0 +1,43 @@
+---
+title: Add or update a component
+description: Learn how to add or update an nf-core component
+---
+
+import { Steps    } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+Contributing components to nf-core involves developing modular, reusable pipeline elements that adhere to community guidelines for standardization and quality.
+These components, such as individual analysis tools or process modules, are integrated into pipelines, ensuring consistency and ease of use across projects.
+By contributing, you help expand the nf-core ecosystem while promoting reproducibility and collaboration in bioinformatics workflows.
+
+## Contribute to components
+
+nf-core modules and subworkflows are stored in the [`nf-core/modules`](https://github.com/nf-core/modules/tree/master/modules) repository.
+Anyone is welcome to contribute to this repository by adding new or improving existing components.
+
+To contribute to the nf-core modules repository:
+
+<Steps>
+
+1. Fork the [`nf-core/modules`](https://github.com/nf-core/modules/tree/master/modules) repository to your personal account or organization.
+2. Create a new branch using Git or the GitHub GUI:
+    - Git: Run `git checkout -b <new component>`. Replace `<new component>` with an informative name for the new/modified component.
+    - GUI: Select the top-left dropdown menu and create a new branch. Give the branch an informative name for the new/modified component.
+3. Add the new component or modify an existing component.
+    - See RELEVANT SECTIONS for more information about component specifications.
+4. When your component is ready, make a pull request against the [`nf-core/modules`](https://github.com/nf-core/modules/tree/master/modules) repository.
+5. Post your pull request in the `#request-review` Slack channel.
+    
+    <Aside>
+    Most contributors don't monitor the modules repository and posting your pull request increases visibility.
+    Many contributors like to "trade" reviews.
+    </Aside>
+
+</Steps>
+
+See RELEVANT SECTIONS for more information about reviewing components.
+
+<Aside type="tip" title="Submit one pull request per component">
+Adding or updating multiple components in one pull request can slow approval.
+Large pull requests take longer to review and change requests may block changes that would have otherwise been accepted.
+</Aside>

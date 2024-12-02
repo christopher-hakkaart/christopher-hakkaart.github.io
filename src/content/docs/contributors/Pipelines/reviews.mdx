@@ -1,0 +1,48 @@
+---
+title: Pipeline reviews
+description: Learn to review nf-core pipelines
+---
+
+import { Steps    } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+Pipeline release reviews can be daunting, especially for those tackling them for the first time.
+
+Release PRs often encompass diverse changes, making it challenging to establish a strict set of review guidelines compared to modules or subworkflows.
+
+The reviewer's primary role is to ensure the pipeline aligns with nf-core's core principles—reproducibility, comprehensive reporting, proper documentation, and adherence to the template.
+
+## How to review a pipeline release
+
+<Steps>
+
+1. Assign yourself to the pull request.
+2. Check the pipeline meets the nf-core pipeline guidelines:
+    - Nextflow: Workflows must be built using Nextflow.
+    - Community owned: Pipelines are owned by the community.
+    - Identity and branding: Primary development must on the nf-core organization.
+    - Workflow specificity: There should only be a single pipeline per data/analysis type.
+    - Workflow size: Not too big, not too small.
+    - Workflow name: Names should be lower case and without punctuation.
+    - Use the template: All nf-core pipelines must be built using the nf-core template.
+    - Software license: Pipelines must open source, released with the MIT license.
+    - Bundled documentation: Pipeline documentation must be hosted on the nf-core website.
+    - Docker support: Software must be bundled using Docker and versioned.
+    - Continuous integration testing: Pipelines must run CI tests.
+    - Semantic versioning: Pipelines must use stable release tags.
+    - Standardized parameters: Strive to have standardized usage.
+    - Single command: Pipelines should run in a single command.
+    - Keywords: Excellent documentation and GitHub repository keywords.
+    - Pass lint tests: The pipeline must not have any failures in the nf-core pipelines lint tests.
+    - Credits and acknowledgements: Pipelines must properly acknowledge prior work.
+    - Minimum inputs: Pipelines should be able to run with as little input as possible.
+    - nf-core git branches: Use `master`, `dev`, and `TEMPLATE`.
+
+    See **RELEVANT SECTION** for more information about nf-core pipeline guidelines.
+
+3. Approve the pull request or suggest changes. Discuss any suggested changes with the author(s) as required.
+
+</Steps>
+
+## How to review a pipeline
+

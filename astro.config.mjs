@@ -17,6 +17,18 @@ export default defineConfig({
 					autogenerate: { directory: 'gettingstarted' },
 				},
 				{
+					label: 'Contributors',
+					autogenerate: { directory: 'contributors' },
+				},
+				{
+					label: 'Users',
+					autogenerate: { directory: 'users' },
+				},
+				{
+					label: 'Developers',
+					autogenerate: { directory: 'developers' },
+				},
+				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
